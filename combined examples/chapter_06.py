@@ -1,6 +1,3 @@
-# The following will allow for the use of .magic to clear console and variables
-from IPython import get_ipython
-
 # Section 6.2.1 snippets
 country_codes = {'Finland': 'fi', 'South Africa': 'za', 
                   'Nepal': 'np'}
@@ -22,9 +19,8 @@ if country_codes:
 else:
     print('country_codes is empty')
     
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -72,9 +68,7 @@ days_per_month
 for month, days in days_per_month.items():
     print(f'{month} has {days} days')
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -135,9 +129,7 @@ roman_numerals.get('V')
 
 'III' not in roman_numerals
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -214,9 +206,7 @@ list(months.items())
 for month_name in sorted(months.keys()):
      print(month_name, end='  ')
      
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
 # Pearson Education, Inc. All Rights Reserved.                           #
@@ -275,49 +265,7 @@ country_capitals1 == country_capitals3
 
 country_capitals1 != country_capitals2
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
-
-##########################################################################
-# (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
-# Pearson Education, Inc. All Rights Reserved.                           #
-#                                                                        #
-# DISCLAIMER: The authors and publisher of this book have used their     #
-# best efforts in preparing the book. These efforts include the          #
-# development, research, and testing of the theories and programs        #
-# to determine their effectiveness. The authors and publisher make       #
-# no warranty of any kind, expressed or implied, with regard to these    #
-# programs or to the documentation contained in these books. The authors #
-# and publisher shall not be liable in any event for incidental or       #
-# consequential damages in connection with, or arising out of, the       #
-# furnishing, performance, or use of these programs.                     #
-##########################################################################
-# Section 6.2.6 snippets
-# fig06_01.py
-"""Using a dictionary to represent an instructor's grade book."""
-grade_book = {            
-    'Susan': [92, 85, 100], 
-    'Eduardo': [83, 95, 79],
-    'Azizi': [91, 89, 82],  
-    'Pantipa': [97, 91, 92] 
-}
-
-all_grades_total = 0
-all_grades_count = 0
-
-for name, grades in grade_book.items():
-    total = sum(grades)
-    print(f'Average for {name} is {total/len(grades):.2f}')
-    all_grades_total += total
-    all_grades_count += len(grades)
-    
-print(f"Class's average is: {all_grades_total / all_grades_count:.2f}")
-
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
 
 ##########################################################################
@@ -335,27 +283,6 @@ get_ipython().magic('clear')
 # furnishing, performance, or use of these programs.                     #
 ##########################################################################
 # Section 6.2.7 snippets
-# fig06_02.py
-"""Tokenizing a string and counting unique words."""
-
-text = ('this is sample text with several words ' 
-        'this is more sample text with some different words')
-
-word_counts = {}
-
-# count occurrences of each unique word
-for word in text.split():
-    if word in word_counts: 
-        word_counts[word] += 1  # update existing key-value pair
-    else:
-        word_counts[word] = 1  # insert new key-value pair
-
-print(f'{"WORD":<12}COUNT')
-
-for word, count in sorted(word_counts.items()):
-    print(f'{word:<12}{count}')
-
-print('\nNumber of unique words:', len(word_counts))
 # Python Standard Library Module ‘collections‘
 from collections import Counter
 
@@ -369,9 +296,7 @@ for word, count in sorted(counter.items()):
     
 print('Number of unique keys:', len(counter.keys()))
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 
 ##########################################################################
@@ -434,9 +359,7 @@ country_codes.update(Australia='au')
 
 country_codes
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -465,9 +388,7 @@ grades2 = {k: sum(v) / len(v) for k, v in grades.items()}
 
 grades2
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -536,9 +457,6 @@ set(numbers)
 
 set()
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -613,9 +531,7 @@ for word in sorted(unique_words):
 
 {1, 3, 5}.issuperset({3, 2})
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -681,9 +597,7 @@ set('abc def ghi jkl mno').issuperset('hi mom')
 
 {1, 3, 5}.isdisjoint({4, 6, 1})
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 
 ##########################################################################
@@ -761,9 +675,7 @@ numbers.clear()
 
 numbers
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -786,9 +698,7 @@ evens = {item for item in numbers if item % 2 == 0}
 
 evens
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 
 ##########################################################################

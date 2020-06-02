@@ -1,6 +1,3 @@
-# The following will allow for the use of .magic to clear console and variables
-from IPython import get_ipython
-
 # Section 5.2 snippets
 
 # Creating a List
@@ -50,33 +47,15 @@ c[0] + c[1] + c[2]
 a_list = []
 
 for number in range(1, 6):
-    print("number is "+str(number))                         # Added by TAA
-    print("putting it into a_list["+str(len(a_list))+"]")   # Added by TAA
-    print()                                                 # Added by TAA
     a_list += [number]
     
-    
 a_list
-
-a_list += (range(1,6))                          # Added by TAA
-
-a_list                                          # Added by TAA
 
 letters = []
 
 letters += 'Python'
 
 letters
-
-letters = []                                    # Added by TAA
-
-letters = letters + 'Python'                    # Added by TAA - Won't Work
-
-letters                                         # Added by TAA
-
-letters[len(letters):len(letters)] = ["Python"] # Added by TAA
-
-letters                                         # Added by TAA
 
 # Concatenating Lists with +
 list1 = [10, 20, 30]
@@ -105,10 +84,6 @@ a == c
 a < c
 
 c >= b
-
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
 
 ##########################################################################
@@ -201,19 +176,11 @@ tuple2 = tuple1
 
 tuple2
 
-hash(tuple1)                                # Added by TAA
-
-hash(tuple2)                                # Added by TAA
-
 tuple1 += (40, 50)
 
 tuple1
 
 tuple2
-
-hash(tuple1)                                # Added by TAA
-
-hash(tuple2)                                # Added by TAA
 
 # Appending Tuples to Lists
 numbers = [1, 2, 3, 4, 5]
@@ -225,19 +192,11 @@ numbers
 # Tuples May Contain Mutable Objects
 student_tuple = ('Amanda', 'Blue', [98, 75, 87])
 
-hash(student_tuple)                         # Added by TAA - Won't work
-
-id(student_tuple)                           # Added by TAA
-
 student_tuple[2][1] = 85
 
 student_tuple
 
-id(student_tuple)                           # Added by TAA
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -320,9 +279,13 @@ tuple(enumerate(colors))
 for index, value in enumerate(colors):
     print(f'{index}: {value}')
     
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
+
+
+
+
+
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -428,9 +391,7 @@ numbers
 
 id(numbers)
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -515,10 +476,6 @@ del numbers
 
 numbers
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
-
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
 # Pearson Education, Inc. All Rights Reserved.                           #
@@ -586,10 +543,6 @@ numbers_tuple
 
 modify_elements(numbers_tuple)
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
-
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -644,9 +597,7 @@ ascending_colors
 
 colors
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -724,9 +675,6 @@ if key in numbers:
 else:
     print(f'{key} not found')
     
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -837,9 +785,7 @@ copied_list = color_names.copy()
 
 copied_list
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 
 ##########################################################################
@@ -914,9 +860,6 @@ stack
 
 stack.pop()
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -966,9 +909,6 @@ colors2
 
 colors
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -1021,9 +961,7 @@ squares_of_odds = (x ** 2 for x in numbers if x % 2 != 0)
 
 squares_of_odds 
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 
 
 ##########################################################################
@@ -1088,9 +1026,8 @@ list(map(lambda x: x ** 2,
 
 [x ** 2 for x in numbers if x % 2 != 0]
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -1170,9 +1107,7 @@ grade_point_averages = [3.5, 4.0, 3.75]
 for name, gpa in zip(names, grade_point_averages):
     print(f'Name={name}; GPA={gpa}')
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
 # Pearson Education, Inc. All Rights Reserved.                           #
@@ -1235,9 +1170,11 @@ for i, row in enumerate(a):
         print(f'a[{i}][{j}]={item} ', end=' ')
     print()
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
+
+
+
+
+
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
@@ -1368,10 +1305,11 @@ for bar, frequency in zip(axes.patches, frequencies):
 # Saving Snippets to a File with the %save Magic 
 %save RollDie.py 1-13
 
-# Cleaning up at end of snippet
-get_ipython().magic('reset -f')
-get_ipython().magic('clear')
- 
+
+
+
+
+   
 
 ##########################################################################
 # (C) Copyright 2019 by Deitel & Associates, Inc. and                    #
